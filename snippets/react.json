@@ -1,0 +1,14 @@
+{
+    "rfcm": {
+        "prefix": "rfcm",
+        "body": [
+            "import {memo} from 'react';",
+            "const $1 = () => {",
+                "return <div>$3</div>",
+            "}",
+  
+            "export default memo($2);"
+        ],
+        "description": "react函数组件"
+    }
+}

@@ -1,0 +1,102 @@
+{
+  "name": "vscode-extension-demo",
+  "displayName": "vscode-extension-demo",
+  "description": "vscodeIDE插件实现demo",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-extension-demo.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/react.json"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "vscode-extension-demo",
+      "properties": {
+        "vscodePluginDemo.yourName": {
+          "type": "string",
+          "default": "默认: demo， 请输入your name",
+          "description": "vscode插件开发示例-插件设置项"
+        },
+        "vscodePluginDemo.showTip": {
+          "type": "boolean",
+          "default": true,
+          "description": "vscode插件开发示例: 是否在每次启动时显示欢迎提示！"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "vscode-extension-demo.helloWorld",
+        "title": "Hello World Demo"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-extension-demo.helloWorld",
+        "key": "ctrl+y",
+        "mac": "ctrl+y",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "vscode-extension-demo.helloWorld",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "viewsContainers": {
+    "activitybar": [
+      {
+        "id": "beautifulGirl",
+        "title": "美女",
+        "icon": "images/beautifulGirl.svg"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.63.0",
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4",
+    "@vscode/test-electron": "^1.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SUNNERCMS/vscode-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SUNNERCMS/vscode-extension/issues"
+  },
+  "homepage": "https://github.com/SUNNERCMS/vscode-extension#readme",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "author": "",
+  "license": "ISC"
+}
