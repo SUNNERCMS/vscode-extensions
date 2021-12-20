@@ -10,7 +10,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-extension-demo.helloWorld"
+    "onCommand:vscode-extension-demo.helloWorld",
+    "onCommand:formatConversion.camelCase"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -40,6 +41,10 @@
       {
         "command": "vscode-extension-demo.helloWorld",
         "title": "Hello World Demo"
+      },
+      {
+        "command": "formatConversion.camelCase",
+        "title": "camelCase"
       }
     ],
     "keybindings": [
