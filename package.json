@@ -13,6 +13,7 @@
     "onCommand:vscode-extension-demo.helloWorld",
     "onCommand:formatConversion.camelCase"
   ],
+  "icon": "images/iconImage.jpg",
   "main": "./extension.js",
   "contributes": {
     "snippets": [
