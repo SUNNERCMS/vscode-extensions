@@ -4,7 +4,7 @@
   "description": "vscodeIDE插件实现demo",
   "version": "0.0.3",
   "publisher": "sunnercms",
-  "engines": {
+  "engines": {  
     "vscode": "^1.63.0"
   },
   "keywords": [
@@ -15,19 +15,13 @@
   "categories": [
     "Other"
   ],
+  "icon": "images/iconImage.jpg",
   "activationEvents": [
     "onCommand:vscode-extension-demo.helloWorld",
     "onCommand:formatConversion.camelCase"
   ],
-  "icon": "images/iconImage.jpg",
   "main": "./extension.js",
   "contributes": {
-    "snippets": [
-      {
-        "language": "javascript",
-        "path": "./snippets/react.json"
-      }
-    ],
     "configuration": {
       "type": "object",
       "title": "vscode-extension-demo",
@@ -44,16 +38,6 @@
         }
       }
     },
-    "commands": [
-      {
-        "command": "vscode-extension-demo.helloWorld",
-        "title": "Hello World Demo"
-      },
-      {
-        "command": "formatConversion.camelCase",
-        "title": "camelCase"
-      }
-    ],
     "keybindings": [
       {
         "command": "vscode-extension-demo.helloWorld",
@@ -70,14 +54,21 @@
           "group": "navigation"
         }
       ]
-    }
-  },
-  "viewsContainers": {
-    "activitybar": [
+    },
+    "commands": [
       {
-        "id": "beautifulGirl",
-        "title": "美女",
-        "icon": "images/beautifulGirl.svg"
+        "command": "vscode-extension-demo.helloWorld",
+        "title": "Hello World Demo"
+      },
+      {
+        "command": "formatConversion.camelCase",
+        "title": "camelCase"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/react.json"
       }
     ]
   },
