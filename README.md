@@ -4,10 +4,9 @@ vscode IDE插件开发示例demo
 
 ## Features
 
-1、hello word
-2、代码片段
+1、hello word 
+2、命令、菜单、快捷键
+3、代码片段
+4、格式转换：下划线转驼峰
 
-
-> 分享大纲
-
-**Enjoy!**
+**未完待续!**
