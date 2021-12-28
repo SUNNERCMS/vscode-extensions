@@ -1,3 +1,4 @@
+// vscode官方文档：https://code.visualstudio.com/api/references/vscode-api
 const vscode = require('vscode');
 const {toCamelCase, formatConversionCheck} = require("./utils/index");
 
