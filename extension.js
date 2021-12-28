@@ -16,7 +16,7 @@ const activate = (context) => {
 		vscode.window.showInformationMessage(showMessage);
 	});
 
-	// 格式转换：snakeCase to camelCase
+	// 格式转换：snakeCase to camelCase(hello_word  ->  helloWord)
 	let disposableTwo = vscode.commands.registerCommand(
 		"formatConversion.camelCase",
 		() => {
@@ -24,26 +24,26 @@ const activate = (context) => {
 		  if (!activeEditor) {
 			return;
 		  }
-		  const { selection } = activeEditor;
-		  const selected = activeEditor.document.getText(selection);
+		  const { selection, document } = activeEditor;
+		  const selected = document.getText(selection);
 		  try {
-			if(formatConversionCheck(selected)) {
-				return vscode.window.showInformationMessage(
-					"亲：这种格式我转换不了呀 ~ "
-				);
-			}
-			if (selected.length > 66) {
-				return vscode.window.showInformationMessage(
-					"亲：太长了我转换不了啦 ~ "
-				);
-			}
-			const humpNamingString = toCamelCase(selected);
-			activeEditor.edit((editBuilder) => {
-			  editBuilder.replace(activeEditor.selection, humpNamingString);
-			});
+				if(formatConversionCheck(selected)) {
+					return vscode.window.showInformationMessage(
+						"亲：这种格式我转换不了呀 ~ "
+					);
+				}
+				if (selected.length > 10) {
+					return vscode.window.showInformationMessage(
+						"亲：太长了我转换不了啦 ~ "
+					);
+				}
+				const humpNamingString = toCamelCase(selected);
+				activeEditor.edit((editBuilder) => {
+					editBuilder.replace(activeEditor.selection, humpNamingString);
+				});
 		  } catch (error) {
-			console.log("error", error);
-			vscode.window.showInformationMessage("程序错误" + error);
+				console.log("error", error);
+				vscode.window.showInformationMessage("程序错误" + error);
 		  }
 		}
 	);
