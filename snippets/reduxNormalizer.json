@@ -1,0 +1,35 @@
+{
+    "rnl": {
+        "prefix": "rnL",
+        "body": [
+            "import {ENDPOINT_URL} from 'common/apis';",
+            "import reduxNormalizer from 'common/reduxNormalizer';",
+            "import Main from './Main';",
+            "",
+            "const log = 'reduxNormalizer-log';",
+            "const logText = 'reduxNormalizer-logText';",
+            "export default reduxNormalizer({",
+            "    namespace: 'namespace',",
+            "    state: {",
+            "        demoData: {}",
+            "    },",
+            "    reducers: {",
+            "        demoData: {",
+            "            type: 'api',",
+            "            endpoint: ENDPOINT_URL,",
+            "            apiType: 'load',",
+            "            getResponse: res => res,",
+            "            normalizer: res => res",
+            "       },",
+            "    },",
+            "    log,",
+            "    logText,",
+            "    hasPush: true,",
+            "    mapStateToProps: () => {},",
+            "    mapDispatchToProps: {}",
+            "})(Main);"
+            
+        ],
+        "description": "reduxNormaLizer代码片段"
+    }
+}

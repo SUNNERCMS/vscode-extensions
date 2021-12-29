@@ -1,0 +1,17 @@
+{
+    "apimc": {
+        "prefix": "apimc",
+        "body": [
+            "module.exports = (path, params) => {",
+            "    const wrapResponse = require('../lib/wrapResponse');",
+            "    const tpl = require('../lib/tpl');",
+            "    const res = tpl.success();",
+            "    res.data = {",
+            "        //此处mock接口返回的数据",
+            "    };",
+            "    return wrapResponse(res);",
+            "};"
+        ],
+        "description": "mock接口返回数据代码片段"
+    }
+}

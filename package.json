@@ -105,6 +105,14 @@
       {
         "language": "javascript",
         "path": "./snippets/react.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/reduxNormalizer.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/apiResponseMock.json"
       }
     ]
   },
