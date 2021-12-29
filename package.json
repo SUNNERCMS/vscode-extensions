@@ -1,16 +1,16 @@
 {
-  "name": "vscode-extensions-demo",
-  "displayName": "vscode-extensions-demo",
-  "description": "vscodeIDE插件实现demo",
-  "version": "0.0.3",
+  "name": "easywork",
+  "displayName": "easywork",
+  "description": "简单开心工作",
+  "version": "0.0.5",
   "publisher": "sunnercms",
   "engines": {
     "vscode": "^1.63.0"
   },
   "keywords": [
-    "vscode",
-    "extensions",
-    "demo"
+    "easywork",
+    "translator",
+    "snippests"
   ],
   "categories": [
     "Other"
