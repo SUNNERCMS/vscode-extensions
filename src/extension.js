@@ -10,10 +10,10 @@ const activate = context => {
     console.log('恭喜，您的扩展“vscode-plugin-demo”已被激活！');
     console.log(vscode);
     require('./helloword')(context); // helloworld
-    require('./camelCase')(context); // hello_word  ->  helloWord
-    require('./constCase')(context); // hello_word  ->  helloWord
-    require('./snakeCase')(context); // hello_word  ->  helloWord
-    require('./paramCase')(context); // hello_word  ->  helloWord
+    require('./humpCase')(context);  // helloWord 
+    require('./constCase')(context); // HELLO_WORD 
+    require('./snakeCase')(context); // hello_word 
+    require('./paramCase')(context); // hello-word 
 
 };
 

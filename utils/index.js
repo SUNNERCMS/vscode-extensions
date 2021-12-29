@@ -46,7 +46,7 @@ const toSnakeCase = (str, formatType) => {
             } else {
                 return str.replace(/([A-Z])/g, $1 => '_' + $1.toLowerCase());
             }
-        case 'camelCase':
+        case 'humpCase':
             if(reg1.test(str)) {
                 const temp = str.toLowerCase();
                 return temp.replace(reg1, ($0, $1) => $1.toUpperCase());
