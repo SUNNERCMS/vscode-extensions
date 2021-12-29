@@ -3,11 +3,11 @@
         "prefix": "rfcm",
         "body": [
             "import {memo} from 'react';",
-            "const $1 = () => {",
-                "return <div>$3</div>",
+            "const Demo = () => {",
+                "return <div>$1</div>",
             "}",
   
-            "export default memo($2);"
+            "export default memo(Demo);"
         ],
         "description": "react函数组件"
     }

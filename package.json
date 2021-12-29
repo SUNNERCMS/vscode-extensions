@@ -4,7 +4,7 @@
   "description": "vscodeIDE插件实现demo",
   "version": "0.0.3",
   "publisher": "sunnercms",
-  "engines": {  
+  "engines": {
     "vscode": "^1.63.0"
   },
   "keywords": [
@@ -18,9 +18,12 @@
   "icon": "images/iconImage.jpg",
   "activationEvents": [
     "onCommand:vscode-extension-demo.helloWorld",
-    "onCommand:formatConversion.camelCase"
+    "onCommand:formatConversion.camelCase",
+    "onCommand:formatConversion.constCase",
+    "onCommand:formatConversion.snakeCase",
+    "onCommand:formatConversion.paramCase"
   ],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "configuration": {
       "type": "object",
@@ -52,6 +55,26 @@
           "when": "editorFocus",
           "command": "vscode-extension-demo.helloWorld",
           "group": "navigation"
+        },
+        {
+          "when": "editorFocus",
+          "command": "formatConversion.camelCase",
+          "group": "0_formatConversion@1"
+        },
+        {
+          "when": "editorFocus",
+          "command": "formatConversion.snakeCase",
+          "group": "0_formatConversion@2"
+        },
+        {
+          "when": "editorFocus",
+          "command": "formatConversion.paramCase",
+          "group": "0_formatConversion@3"
+        },
+        {
+          "when": "editorFocus",
+          "command": "formatConversion.constCase",
+          "group": "0_formatConversion@4"
         }
       ]
     },
@@ -62,7 +85,19 @@
       },
       {
         "command": "formatConversion.camelCase",
-        "title": "camelCase"
+        "title": "formatConversion"
+      },
+      {
+        "command": "formatConversion.constCase",
+        "title": "FORMAT_CONVERSION"
+      },
+      {
+        "command": "formatConversion.snakeCase",
+        "title": "format_conversion"
+      },
+      {
+        "command": "formatConversion.paramCase",
+        "title": "format-conversion"
       }
     ],
     "snippets": [
@@ -86,7 +121,11 @@
     "glob": "^7.1.7",
     "mocha": "^9.1.3",
     "typescript": "^4.4.4",
-    "@vscode/test-electron": "^1.6.2"
+    "@vscode/test-electron": "^1.6.2",
+    "crypto": "^1.0.1",
+    "md5-node": "^1.0.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   },
   "repository": {
     "type": "git",
