@@ -26,22 +26,6 @@
   ],
   "main": "./src/extension.js",
   "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "vscode-extension-demo",
-      "properties": {
-        "vscodePluginDemo.yourName": {
-          "type": "string",
-          "default": "默认: demo， 请输入your name",
-          "description": "vscode插件开发示例-插件设置项"
-        },
-        "vscodePluginDemo.showTip": {
-          "type": "boolean",
-          "default": true,
-          "description": "vscode插件开发示例: 是否在每次启动时显示欢迎提示！"
-        }
-      }
-    },
     "keybindings": [
       {
         "command": "vscode-extension-demo.helloWorld",
