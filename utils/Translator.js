@@ -39,7 +39,7 @@ const Translator = class {
     const result = paramsData.join("&");
     return result;
   }
-  
+
   /**
    * 进行翻译
    * 有道翻译api
@@ -49,18 +49,19 @@ const Translator = class {
     const youdaoHost = "http://openapi.youdao.com/api";
     // 在get请求中，中文需要进行uri编码
     const encodeURIWord = encodeURI(word);
+    const {appKey, secretKey, from, to} = this.config;
     const salt = this.getRandomN(1000);
-    const sign = this.md5(this.config.appKey + word + salt + this.config.secretKey);
+    const sign = this.md5(appKey + word + salt + secretKey);
     const paramsJson = {
       q: encodeURIWord,
-      from: this.config.from,
-      to: this.config.to,
-      appKey: this.config.appKey,
+      from,
+      to,
+      appKey,
       salt,
       sign,
     };
     // let url = `http://openapi.youdao.com/api?q=${encodeURI(q)}&from=${from}&to=${to}&appKey=${appKey}&salt=${salt}&sign=${sign}`;
-    const url = youdaoHost + "?" + this.generateUrlParams(paramsJson);
+    const url = `${youdaoHost}?${this.generateUrlParams(paramsJson)}`;
     const result = await request.get({ url });
     return result;
    }
