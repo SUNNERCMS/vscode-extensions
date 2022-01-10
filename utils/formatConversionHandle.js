@@ -2,6 +2,12 @@ const vscode = require('vscode');
 const Translator = require("./Translator");
 const {isChineseString, formatToFormatConversionHandle} = require('./index');
 const translator = new Translator();
+translator.config = {
+  from: "zh_CHS", // zh-CHS(中文) || ja(日语) || EN(英文) || fr(法语) ...
+  to: "EN",
+  appKey: "445b65d7607c4f71", // https://ai.youdao.com 在有道云上进行注册
+  secretKey: "4mWeH4uty1I3krjuChKqil6PgVCat0s8",
+};
 
 const formatConversionHandle = (caseFormatHandle, formType) => async () => {
     const activeEditor = vscode.window.activeTextEditor;
