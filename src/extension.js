@@ -8,10 +8,11 @@
 const activate = context => {
     console.log('恭喜，您的扩展“vscode-exports-easywork”已被激活！');
     require('./helloword')(context); // helloworld
-    require('./humpCase')(context);  // helloWord 
-    require('./constCase')(context); // HELLO_WORD 
-    require('./snakeCase')(context); // hello_word 
-    require('./paramCase')(context); // hello-word 
+    require('./humpCase')(context);  // helloWorld 
+    require('./constCase')(context); // HELLO_WORLD 
+    require('./snakeCase')(context); // hello_world 
+    require('./paramCase')(context); // hello-world 
+
 };
 
 /**
@@ -23,3 +24,9 @@ module.exports = {
 	activate,
 	deactivate
 }
+
+// import {memo} from 'react';
+// const Demo = () => {
+// return <div></div>
+// }
+// export default memo(Demo);

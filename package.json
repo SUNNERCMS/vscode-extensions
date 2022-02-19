@@ -1,8 +1,8 @@
 {
   "name": "easywork",
   "displayName": "easywork",
-  "description": "简单开心工作",
-  "version": "0.0.8",
+  "description": "easy coding, easy working",
+  "version": "0.1.0",
   "publisher": "sunnercms",
   "engines": {
     "vscode": "^1.63.0"
@@ -97,6 +97,10 @@
       {
         "language": "javascript",
         "path": "./snippets/apiResponseMock.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/console.json"
       }
     ]
   },

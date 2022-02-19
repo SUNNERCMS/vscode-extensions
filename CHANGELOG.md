@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "vscode-extension-demo" extension will be documented in this file.
+All info about changes
+[Keep a Changelog](http://keepachangelog.com/) 
+# Released
+[0.1.0] - 2022.02.19
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- add console.log debug snip
+- modify extension description

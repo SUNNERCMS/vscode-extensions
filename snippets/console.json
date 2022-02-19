@@ -1,0 +1,9 @@
+{
+    "rfcm": {
+        "prefix": "cl",
+        "body": [
+            "console.log('debug----------00001$1:', $2);"
+        ],
+        "description": "console.log"
+    }
+}

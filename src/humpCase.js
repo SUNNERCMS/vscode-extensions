@@ -9,4 +9,5 @@ module.exports = function(context) {
         formatConversionHandle(caseFormatHandle, 'humpCase')
 	);
     context.subscriptions.push(disposableTwo);
+		// const productPlatform
 };
