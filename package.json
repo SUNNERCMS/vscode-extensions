@@ -2,7 +2,7 @@
   "name": "easywork",
   "displayName": "easywork",
   "description": "easy coding, easy working",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "sunnercms",
   "engines": {
     "vscode": "^1.63.0"

@@ -1,6 +1,6 @@
 {
-    "rfcm": {
-        "prefix": "cl",
+    "ewcl": {
+        "prefix": "ewcl",
         "body": [
             "console.log('debug----------00001$1:', $2);"
         ],
